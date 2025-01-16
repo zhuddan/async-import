@@ -1,5 +1,3 @@
-import './style.css'
-
 function init() {
   const arr = 'abcdefg'.split('')
   const card = document.querySelector('.card')
@@ -8,10 +6,15 @@ function init() {
     btn.innerText = e
     card.appendChild(btn)
     btn.addEventListener('click', async () => {
-      const module = await import('/template/' + e + '.js')
+      const file = ''
+       + './template/' + e + '.js'
+      console.log(file)
+      const module = await import(file)
       module.print()
     })
   })
 }
 
-init()
+window.onload =()=>{
+  init()
+}
