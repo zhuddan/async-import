@@ -8,7 +8,6 @@ function init() {
     btn.addEventListener('click', async () => {
       const file = ''
        + './template/' + e + '.js'
-      console.log(file)
       const module = await import(file)
       module.print()
     })
