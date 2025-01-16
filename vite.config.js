@@ -3,6 +3,6 @@ import { defineConfig } from "vite"
 export default defineConfig({
   base: '/docs',
   build:{
-    outDir:'docs'
+    outDir:'/async-import/docs'
   }
 })
